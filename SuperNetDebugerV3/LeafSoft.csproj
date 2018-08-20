@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{73F4A306-B926-4155-95C3-36C37497BDD3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LeafSoft</RootNamespace>
+    <AssemblyName>C#通讯调试工具%28v3.0测试版%29</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>leafsoft.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutMe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutMe.Designer.cs">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBytes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBytes.Designer.cs">
+      <DependentUpon>frmBytes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCheck.Designer.cs">
+      <DependentUpon>frmCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCMD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCMD.Designer.cs">
+      <DependentUpon>frmCMD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPoly.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPoly.Designer.cs">
+      <DependentUpon>frmPoly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lib\BytesCheck.cs" />
+    <Compile Include="Lib\HotKey.cs" />
+    <Compile Include="Model\LeafUDPClient.cs" />
+    <Compile Include="PartPanel\BasePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\NetTCPServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\NetTCPServer.Designer.cs">
+      <DependentUpon>NetTCPServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\NetUDPClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\NetUDPClient.Designer.cs">
+      <DependentUpon>NetUDPClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\TabDataReceive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\TabDataReceive.Designer.cs">
+      <DependentUpon>TabDataReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yyzq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yyzq.Designer.cs">
+      <DependentUpon>yyzq.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LeafControl\BytesBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LeafControl\HexBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lib\AppInfor.cs" />
+    <Compile Include="Lib\EnumType.cs" />
+    <Compile Include="Lib\LeafEvent.cs" />
+    <Compile Include="Model\CMD.cs" />
+    <Compile Include="Model\LeafTCPClient.cs" />
+    <Compile Include="PartPanel\ComPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PartPanel\ComPanel.Designer.cs">
+      <DependentUpon>ComPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartPanel\TCPClientPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PartPanel\TCPClientPanel.Designer.cs">
+      <DependentUpon>TCPClientPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartPanel\TCPServerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PartPanel\TCPServerPanel.Designer.cs">
+      <DependentUpon>TCPServerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartPanel\UDPClientPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PartPanel\UDPClientPanel.Designer.cs">
+      <DependentUpon>UDPClientPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartPanel\UDPServerPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PartPanel\UDPServerPanel.Designer.cs">
+      <DependentUpon>UDPServerPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Units\NetRs232.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\NetRs232.Designer.cs">
+      <DependentUpon>NetRs232.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\DataCounter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\DataCounter.Designer.cs">
+      <DependentUpon>DataCounter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\DataReceive.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\DataReceive.Designer.cs">
+      <DependentUpon>DataReceive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\DataSend.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\DataSend.Designer.cs">
+      <DependentUpon>DataSend.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\ICommunication.cs" />
+    <Compile Include="Units\NetTCPClient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\NetTCPClient.Designer.cs">
+      <DependentUpon>NetTCPClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Units\NetUDPServer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Units\NetUDPServer.Designer.cs">
+      <DependentUpon>NetUDPServer.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AboutMe.resx">
+      <DependentUpon>AboutMe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBytes.resx">
+      <DependentUpon>frmBytes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCheck.resx">
+      <DependentUpon>frmCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCMD.resx">
+      <DependentUpon>frmCMD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPoly.resx">
+      <DependentUpon>frmPoly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartPanel\TCPClientPanel.resx">
+      <DependentUpon>TCPClientPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartPanel\UDPClientPanel.resx">
+      <DependentUpon>UDPClientPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\NetTCPClient.resx">
+      <DependentUpon>NetTCPClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\NetTCPServer.resx">
+      <DependentUpon>NetTCPServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\NetUDPClient.resx">
+      <DependentUpon>NetUDPClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\TabDataReceive.resx">
+      <DependentUpon>TabDataReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yyzq.resx">
+      <DependentUpon>yyzq.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartPanel\ComPanel.resx">
+      <DependentUpon>ComPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartPanel\TCPServerPanel.resx">
+      <DependentUpon>TCPServerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartPanel\UDPServerPanel.resx">
+      <DependentUpon>UDPServerPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Units\NetRs232.resx">
+      <DependentUpon>NetRs232.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\DataCounter.resx">
+      <DependentUpon>DataCounter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\DataReceive.resx">
+      <DependentUpon>DataReceive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\DataSend.resx">
+      <DependentUpon>DataSend.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Units\NetUDPServer.resx">
+      <DependentUpon>NetUDPServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+    <None Include="Resources\calculator.png" />
+    <None Include="Resources\ucom.png" />
+    <None Include="Resources\ntcp.png" />
+    <None Include="Resources\nudp.png" />
+    <None Include="Resources\hex.png" />
+    <None Include="Resources\hex.ico" />
+    <None Include="Resources\tcp.ico" />
+    <None Include="Resources\udp.ico" />
+    <None Include="Resources\com.ico" />
+    <None Include="Resources\greenlight.png" />
+    <None Include="Resources\redlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="leafsoft.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
